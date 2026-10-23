@@ -1,0 +1,33 @@
+{
+  "name": "domislink-test-hub",
+  "version": "0.1.0",
+  "description": "Self-replicating PWA for DomisLink hub with CRDT sync to GitHub",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "python -m http.server 8000 --directory public",
+    "build": "echo 'No build step needed for this PWA'",
+    "test": "echo 'Testing sync mechanisms'",
+    "deploy": "git add . && git commit -m 'sync: data update' && git push origin main"
+  },
+  "keywords": [
+    "pwa",
+    "offline-first",
+    "crdt",
+    "sync",
+    "github",
+    "domislink"
+  ],
+  "author": "amaechiubadike",
+  "license": "MIT",
+  "dependencies": {
+    "@automerge/automerge": "3.5.0",
+    "localforage": "1.10.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
